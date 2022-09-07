@@ -1,6 +1,6 @@
 :root {
     --main-bg: #f8f8f8;
-    --box-bg: #ffffff;
+    --box-bg: #ffffff34;
     --name-color: #232323;
     --card-bg-text: #343434;
   }
@@ -159,22 +159,27 @@
   .container1 .box:nth-child(4) .buy {
     background: #6b6b6b;
   }
-  .container1 .box:nth-child(5) .circle,
-  .container1 .box:nth-child(5) .buy {
-    background: #a55d00;
-  }
   .container1 .box:nth-child(6) .circle,
   .container1 .box:nth-child(6) .buy {
-    background: #353535;
+    background: #a55d00;
   }
   .container1 .box:nth-child(7) .circle,
   .container1 .box:nth-child(7) .buy {
-    background: #490000;
+    background: #353535;
   }
   .container1 .box:nth-child(8) .circle,
   .container1 .box:nth-child(8) .buy {
+    background: #490000;
+  }
+  .container1 .box:nth-child(9) .circle,
+  .container1 .box:nth-child(9) .buy {
     background: #cccccc;
   }
+  .container1 .box:nth-child(9) .circle,
+  .container1 .box:nth-child(9) .buy {
+    background: #cccccc;
+  }
+
 
   .mode-switch {
     background-color: transparent;

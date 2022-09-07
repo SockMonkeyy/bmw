@@ -1,0 +1,19 @@
+//---------------------------------------------------
+// CHANGE THESE
+$series: 'Tom', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+$duration: 0.5
+$transition: 1
+
+//---------------------------------------------------
+// APPEND EXTRA ITEM - An extra item is needed if the series is of odd length
+@if abs(length($series)) % 2 == 1
+  $lastItem: nth($series, 1)
+  $series: append($series, $lastItem)
+
+//---------------------------------------------------
+// DON'T TOUCH THESE
+$seriesLength: length($series)
+$seriesSplitLength: $seriesLength / 2
+$itemDuration: $duration + $transition
+$twiceItemDuration: $itemDuration * 2
+$totalDuration: $itemDuration * $seriesLength
