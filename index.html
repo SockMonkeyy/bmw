@@ -42,12 +42,12 @@
 
                     <ul class="navbar-nav ms-auto">
                         <div class="dropdown show"></div>
-                        <li class="nav-item"><a class="nav-link dropdown-toggle" href="" href="#" role="button"
+                        <li class="nav-item"><a class="nav-link dropdown-toggle" href="#newInv" role="button"
                                 id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">New Inventory</a>
                         </li>
                         <li class="nav-item"><a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                                href="#projects">Certified and Pre Owned Inventory</a></li>
+                                href="#newInv">Certified and Pre Owned Inventory</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Finance</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-toggle" href="#signup">Parts & Service</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-toggle" href="#signup">Specials</a></li>
@@ -91,12 +91,14 @@
     </header>
     <!-- About-->
 
-    
-    <div class="container-fluid">
+
+    <div class="container-fluid" id="newInv">
         <div class="row">
-            <div class="col-12 text-center mt-5"> <h1 class="bmwfont">2023 BMW Inventory</h1>
-                <h3 style="font-weight: bold;">The BMW Certified Experience</h3></div>
-            <div  class="container1 justify-content-center" data-animation="">
+            <div class="col-12 text-center mt-5">
+                <h1 class="bmwfont">2023 BMW Inventory</h1>
+                <h3 style="font-weight: bold;">The BMW Certified Experience</h3>
+            </div>
+            <div class="container1 justify-content-center" data-animation="">
                 <div class="box">
                     <h2 class="name">2023 BMW M340i Sedan</h2>
                     <a href="https://www.birminghambmw.com/research-models/2022/bmw/3-series" class="buy">Learn More</a>
@@ -109,7 +111,7 @@
                     <div class="circle"></div>
                     <img class="product" src="./assets/img/2023bmw430i.jpeg" />
                 </div>
-                <div class="box" >
+                <div class="box">
                     <h2 class="name">2023 BMW 5 Series 530i</h2>
                     <a href="https://www.birminghambmw.com/research-models/2022/bmw/5-series" class="buy">Learn More</a>
                     <div class="circle"></div>
@@ -123,16 +125,16 @@
                 </div>
                 <svg class="svg" viewBox="0 0 1320 300">
                     <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                      BMW of Birmingham
+                        BMW of Birmingham
                     </text>
-                  </svg>  
+                </svg>
                 <div class="box">
                     <h2 class="name">2023 BMW M340i</h2>
                     <a href="https://www.birminghambmw.com/research-models/2022/bmw/m3" class="buy">Learn More</a>
                     <div class="circle"></div>
                     <img class="product" src="./assets/img/2023M3.jpeg" />
                 </div>
-                
+
                 <div class="box">
                     <h2 class="name">2023 BMW 5 Series 530i</h2>
                     <a href="https://www.birminghambmw.com/research-models/2022/bmw/m5" class="buy">Learn More</a>
@@ -180,8 +182,7 @@
             <div class="col-lg-4 col-sm-12 services">
 
                 <a href="https://www.birminghambmw.com/specials/certifiedpreowned"><img class="offers img-fluid"
-                        src="./assets/img/Used Inventory.jpg" style="border-radius: 5px;" width="100%"
-                        alt=""></a>
+                        src="./assets/img/Used Inventory.jpg" style="border-radius: 5px;" width="100%" alt=""></a>
 
             </div>
         </div>
@@ -192,11 +193,11 @@
         </video>
         <div class="overlay">
         </div>
-      <div id="container">
+        <div id="container">
             <span id="text1"></span>
             <span id="text2"></span>
         </div>
-        
+
         <svg id="filters">
             <defs>
                 <filter id="threshold">
@@ -208,7 +209,7 @@
             </defs>
         </svg>
         </h1>
-      </div>
+    </div>
 
 
     <!-- Signup-->
@@ -358,91 +359,91 @@
             });
         });</script>
 
-        <script>
-            const AnimateOnScroll = function ({ offset } = { offset: 10 }) {
-    // Define a dobra superior, inferior e laterais da tela
-    const windowTop = (offset * window.innerHeight) / 100;
-    const windowBottom = window.innerHeight - windowTop;
-    const windowLeft = 0;
-    const windowRight = window.innerWidth;
-  
-    this.start = (element) => {
-      window.requestAnimationFrame(() => {
-        // Seta os atributos customizados
-        element.style.animationDelay = element.dataset.animationDelay;
-        element.style.animationDuration = element.dataset.animationDuration;
-  
-        // Inicia a animacao setando a classe para animar
-        element.classList.add(element.dataset.animation);
-  
-        // Seta o elemento como animado
-        element.dataset.animated = "true";
-      });
-    };
-  
-    this.inViewport = (element) => {
-      // Obtem o boundingbox do elemento
-      const elementRect = element.getBoundingClientRect();
-      const elementTop =
-        elementRect.top + parseInt(element.dataset.animationOffset) ||
-        elementRect.top;
-      const elementBottom =
-        elementRect.bottom - parseInt(element.dataset.animationOffset) ||
-        elementRect.bottom;
-      const elementLeft = elementRect.left;
-      const elementRight = elementRect.right;
-  
-      // Verifica se o elemento esta na tela
-      return (
-        elementTop <= windowBottom &&
-        elementBottom >= windowTop &&
-        elementLeft <= windowRight &&
-        elementRight >= windowLeft
-      );
-    };
-  
-    // Percorre o array de elementos, verifica se o elemento está na tela e inicia animação
-    this.verifyElementsInViewport = (els = elements) => {
-      for (let i = 0, len = els.length; i < len; i++) {
-        // Passa para o proximo laço se o elemento ja estiver animado
-        if (els[i].dataset.animated) continue;
-  
-        this.inViewport(els[i]) && this.start(els[i]);
-      }
-    };
-  
-    // Obtem todos os elementos a serem animados
-    this.getElements = () =>
-      document.querySelectorAll("[data-animation]:not([data-animated])");
-  
-    // Atualiza a lista de elementos a serem animados
-    this.update = () => {
-      elements = this.getElements();
-      elements && this.verifyElementsInViewport(elements);
-    };
-  
-    // Inicia os eventos
-    window.addEventListener("load", this.update, false);
-    window.addEventListener(
-      "scroll",
-      () => this.verifyElementsInViewport(elements),
-      { passive: true }
-    );
-    window.addEventListener(
-      "resize",
-      () => this.verifyElementsInViewport(elements),
-      { passive: true }
-    );
-  };
-  
-  // Initialize
-  const options = {
-    offset: 15 // percentage of the window
-  };
-  
-  const animation = new AnimateOnScroll(options);
+    <script>
+        const AnimateOnScroll = function ({ offset } = { offset: 10 }) {
+            // Define a dobra superior, inferior e laterais da tela
+            const windowTop = (offset * window.innerHeight) / 100;
+            const windowBottom = window.innerHeight - windowTop;
+            const windowLeft = 0;
+            const windowRight = window.innerWidth;
 
-        </script>
+            this.start = (element) => {
+                window.requestAnimationFrame(() => {
+                    // Seta os atributos customizados
+                    element.style.animationDelay = element.dataset.animationDelay;
+                    element.style.animationDuration = element.dataset.animationDuration;
+
+                    // Inicia a animacao setando a classe para animar
+                    element.classList.add(element.dataset.animation);
+
+                    // Seta o elemento como animado
+                    element.dataset.animated = "true";
+                });
+            };
+
+            this.inViewport = (element) => {
+                // Obtem o boundingbox do elemento
+                const elementRect = element.getBoundingClientRect();
+                const elementTop =
+                    elementRect.top + parseInt(element.dataset.animationOffset) ||
+                    elementRect.top;
+                const elementBottom =
+                    elementRect.bottom - parseInt(element.dataset.animationOffset) ||
+                    elementRect.bottom;
+                const elementLeft = elementRect.left;
+                const elementRight = elementRect.right;
+
+                // Verifica se o elemento esta na tela
+                return (
+                    elementTop <= windowBottom &&
+                    elementBottom >= windowTop &&
+                    elementLeft <= windowRight &&
+                    elementRight >= windowLeft
+                );
+            };
+
+            // Percorre o array de elementos, verifica se o elemento está na tela e inicia animação
+            this.verifyElementsInViewport = (els = elements) => {
+                for (let i = 0, len = els.length; i < len; i++) {
+                    // Passa para o proximo laço se o elemento ja estiver animado
+                    if (els[i].dataset.animated) continue;
+
+                    this.inViewport(els[i]) && this.start(els[i]);
+                }
+            };
+
+            // Obtem todos os elementos a serem animados
+            this.getElements = () =>
+                document.querySelectorAll("[data-animation]:not([data-animated])");
+
+            // Atualiza a lista de elementos a serem animados
+            this.update = () => {
+                elements = this.getElements();
+                elements && this.verifyElementsInViewport(elements);
+            };
+
+            // Inicia os eventos
+            window.addEventListener("load", this.update, false);
+            window.addEventListener(
+                "scroll",
+                () => this.verifyElementsInViewport(elements),
+                { passive: true }
+            );
+            window.addEventListener(
+                "resize",
+                () => this.verifyElementsInViewport(elements),
+                { passive: true }
+            );
+        };
+
+        // Initialize
+        const options = {
+            offset: 15 // percentage of the window
+        };
+
+        const animation = new AnimateOnScroll(options);
+
+    </script>
 </body>
 
 </html>

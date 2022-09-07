@@ -4810,6 +4810,11 @@ fieldset:disabled .btn {
     font-size: 2rem;
   }
 
+  #container #text1,
+  #container #text2{
+    font-size: 4rem;
+  }
+
 
 }
 
@@ -12616,7 +12621,7 @@ body {
   }
 
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #0066b1;
   }
 
   #mainNav.navbar-shrink .nav-link:active {
@@ -12624,9 +12629,9 @@ body {
   }
 
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #0066b1;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #0066b1;
   }
 }
 
