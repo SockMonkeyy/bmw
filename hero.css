@@ -1,5 +1,3 @@
-
-
 .overlay {
     width: 100%;
     height: 100vh;
@@ -7,7 +5,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .7) 50%);
     background-size: 3px 3px;
     z-index: 5;
 }
@@ -25,55 +23,105 @@
     max-width: 400px;
     width: 100%;
     height: 50px;
-  }
+}
 
-  .svg {
+.svg {
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute; 
+    position: absolute;
     font-weight: 800;
-    width: 100%; 
+    width: 100%;
     height: 25vh;
-  }
-  svg text {
+}
+
+svg text {
     text-transform: uppercase;
     animation: stroke 5s infinite alternate;
     stroke-width: 2;
     stroke: #0066b1;
     font-size: 6rem;
-  }
-  @keyframes stroke {
-    0%   {
-      fill: rgba(72,138,20,0); stroke: #0067b154;
-      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #0067b154;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
     }
-    25%  {fill: rgba(72,138,20,0); stroke: #0067b1bb}
-    75%  {fill: rgba(72,138,20,0); stroke: rgba(0, 15, 148, 0.925)stroke-width: 3; }
+
+    25% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #0067b1bb
+    }
+
+    75% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(0, 15, 148, 0.925)stroke-width: 3;
+    }
+
     100% {
-      fill: #0066b1; stroke: rgba(54,95,160,0); 
-      stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+        fill: #0066b1;
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
     }
-  }
+}
 
 
-  .bg-video-wrap {
+.bg-video-wrap {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 100vh;
     background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
-  }
-  video {
+}
+
+video {
     min-width: 100%;
     min-height: 100vh;
     z-index: 1;
-  }
-  .overlay {
+}
+
+.overlay {
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .7) 50%);
     background-size: 3px 3px;
     z-index: 2;
-  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+body {
+    margin: 0px;
+}
+
+#container {
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+
+    text-align: center;
+
+    user-select: none;
+}

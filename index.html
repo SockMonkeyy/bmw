@@ -188,11 +188,25 @@
     </div>
 
     <div class="bg-video-wrap">
-        <video src="https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4" loop muted autoplay>
+        <video src="./assets/img/Black Orange Modern Minimalist Digital Marketing Video.mp4" loop muted autoplay>
         </video>
         <div class="overlay">
         </div>
-        <h1 class="heroh1">Fullscreen video background
+      <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
         </h1>
       </div>
 
