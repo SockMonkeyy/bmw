@@ -156,7 +156,12 @@ const texts = [
     "Williams",
     "BMW",
     "of",
-    "Birmingham"
+    "Birmingham",
+    "The",
+    "Ultimate",
+    "Driving",
+    "Machine"
+
 ];
 
 const morphTime = 1;
